@@ -30,6 +30,9 @@
                                 <rect key="frame" x="16" y="499" width="165" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Username?"/>
+                                <connections>
+                                    <action selector="forgotUsernameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vYx-tJ-tFg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIT-J1-NTX">
                                 <rect key="frame" x="164" y="434" width="71" height="35"/>
@@ -43,6 +46,9 @@
                                 <rect key="frame" x="214" y="499" width="160" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
+                                <connections>
+                                    <action selector="forgorPasswordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hZu-bQ-geg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -64,7 +70,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="gt2-DB-2rI"/>
                     <connections>
+                        <outlet property="forgotPasswordButton" destination="sYZ-Pk-tmk" id="sYK-K9-syk"/>
+                        <outlet property="forgotUsernameButton" destination="gPT-ow-ceR" id="yb2-iS-NSh"/>
                         <outlet property="usernameField" destination="33L-Ip-uwB" id="zig-Nl-c6D"/>
+                        <segue destination="jf4-9r-lPO" kind="show" identifier="ForgottenUsernameOrPassword" id="j5F-HY-EtW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -106,6 +115,9 @@
             <point key="canvasLocation" x="136.92307692307691" y="4.9763033175355451"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="j5F-HY-EtW"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
