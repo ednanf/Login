@@ -16,39 +16,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="33L-Ip-uwB">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="33L-Ip-uwB">
                                 <rect key="frame" x="46" y="271" width="307" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L0F-Bc-t74">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L0F-Bc-t74">
                                 <rect key="frame" x="46" y="324" width="307" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPT-ow-ceR">
-                                <rect key="frame" x="10" y="488" width="165" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPT-ow-ceR">
+                                <rect key="frame" x="16" y="447" width="165" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Username?"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYZ-Pk-tmk">
-                                <rect key="frame" x="202" y="488" width="160" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIT-J1-NTX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIT-J1-NTX">
                                 <rect key="frame" x="164" y="382" width="71" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Log In"/>
+                                <connections>
+                                    <segue destination="jf4-9r-lPO" kind="show" id="82M-X7-Zgc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYZ-Pk-tmk">
+                                <rect key="frame" x="214" y="447" width="160" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="GIT-J1-NTX" firstAttribute="top" secondItem="L0F-Bc-t74" secondAttribute="bottom" constant="24" id="2od-7A-kU8"/>
+                            <constraint firstItem="gPT-ow-ceR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8zH-cM-NVX"/>
+                            <constraint firstItem="L0F-Bc-t74" firstAttribute="centerX" secondItem="GIT-J1-NTX" secondAttribute="centerX" id="COf-fO-qFr"/>
+                            <constraint firstItem="sYZ-Pk-tmk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KCU-WZ-GEW"/>
+                            <constraint firstItem="gPT-ow-ceR" firstAttribute="baseline" secondItem="sYZ-Pk-tmk" secondAttribute="baseline" id="KPU-N3-Dwp"/>
+                            <constraint firstItem="gPT-ow-ceR" firstAttribute="top" secondItem="GIT-J1-NTX" secondAttribute="bottom" constant="30" id="RDN-wf-7lW"/>
+                            <constraint firstItem="33L-Ip-uwB" firstAttribute="trailing" secondItem="L0F-Bc-t74" secondAttribute="trailing" id="XBv-Fj-TfH"/>
+                            <constraint firstItem="L0F-Bc-t74" firstAttribute="top" secondItem="33L-Ip-uwB" secondAttribute="bottom" constant="19" id="XwR-it-Ax2"/>
+                            <constraint firstItem="GIT-J1-NTX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="aEP-kd-G6P"/>
+                            <constraint firstItem="33L-Ip-uwB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="kDe-MI-Nlp"/>
+                            <constraint firstItem="33L-Ip-uwB" firstAttribute="leading" secondItem="L0F-Bc-t74" secondAttribute="leading" id="wDo-jP-1rE"/>
+                            <constraint firstItem="33L-Ip-uwB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="yft-0l-kzl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gt2-DB-2rI"/>
                 </viewController>
@@ -59,13 +71,14 @@
         <!--View Controller-->
         <scene sceneID="S5i-hE-IjT">
             <objects>
-                <viewController id="jf4-9r-lPO" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="jf4-9r-lPO" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1VJ-zH-4F3">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="fw1-1o-ROd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LVS-Mw-sPh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MaE-4d-zkG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,11 +104,11 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
